@@ -22,8 +22,16 @@ VALUES
         7,
         100,
         "tyrian",
-        "lannistar",
-        "2023-02-01"
+        "lannistar"
+    );
+-- or you can directly put NULL
+INSERT INTO products
+VALUES
+    (
+        7,
+        NULL,
+        "tyrian",
+        NULL
     );
 
 -- Delete row

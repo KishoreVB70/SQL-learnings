@@ -12,6 +12,7 @@ SELECT id, fname from products;
 SELECT * FROM products
 WHERE house_id = 1
     AND kingdom_id = 1
+    OR city_id = 1
 
 -- find NULL
 SELECT * FROM products
