@@ -14,8 +14,6 @@ INSERT INTO products
 VALUES
     ( 1,100,"jonsnow","blackWatch" ),
     (2,200,"bran","stark");
-
-
 -- insert data as new row into specific columns
 -- other data fields will be NULL
 INSERT INTO products(id, power, fname, house, date)
@@ -27,6 +25,11 @@ VALUES
         "lannistar",
         "2023-02-01"
     );
+
+-- Delete row
+-- Only using first line will delete all the values
+delete from chc
+where fname="Theon"
 
 -- Modify row
 UPDATE products
