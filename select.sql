@@ -8,9 +8,10 @@ SELECT id, fname from products;
 
 
 -- where clause to get specific rows
--- where must contain only one attribute
+-- multiple attributes can be atted to where by AND
 SELECT * FROM products
-WHERE id = 1
+WHERE house_id = 1
+    AND kingdom_id = 1
 
 -- find NULL
 SELECT * FROM products

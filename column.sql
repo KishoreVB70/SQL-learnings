@@ -27,3 +27,15 @@ FIRST
 ALTER TABLE products
 DROP COLUMN lname
 
+-- unique constraint
+-- Creating an new table
+create table got(
+    id int UNIQUE,
+    fname varchar(20)    
+)
+
+-- Existing column into unique column
+-- You won't be able to change a column to unique
+-- if it already contains a duplicate value
+alter table char
+ADD CONSTRAINT UNIQUE(id)
