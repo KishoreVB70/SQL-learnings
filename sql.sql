@@ -24,19 +24,8 @@ CREATE TABLE product(
 -- rename table
 RENAME TABLE product to products;
 
+-- drop table
+DROP TABLE products
 
--- add new column to table
-ALTER TABLE products
-ADD size int;
--- rename column
-ALTER TABLE products
-RENAME COLUMN rating to marks;
--- Modify datatype of column
-ALTER TABLE products
-MODIFY COLUMN marks varchar(5);
-
-
--- query
-SELECT * from products;
 
 
