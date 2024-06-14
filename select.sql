@@ -8,7 +8,7 @@ SELECT id, fname from products;
 
 
 -- where clause to get specific rows
--- where must contain only one column
+-- where must contain only one attribute
 SELECT * FROM products
 WHERE id = 1
 
