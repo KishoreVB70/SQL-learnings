@@ -23,8 +23,14 @@ CREATE TABLE product(
 
 -- rename table
 RENAME TABLE product to products
+-- rename column
+RENAME COLUMN rating to marks
 
 -- add new column to table
 ALTER TABLE products
 ADD size int
+
+-- query
+SELECT * from products
+
 
