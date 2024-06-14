@@ -8,5 +8,13 @@ SELECT id, fname from products;
 
 
 -- where clause to get specific rows
+-- where must contain only one column
 SELECT * FROM products
 WHERE id = 1
+
+-- find NULL
+SELECT * FROM products
+where house IS NULL;
+-- find not NULL
+SELECT * FROM products
+where house IS NOT NULL;

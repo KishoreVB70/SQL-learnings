@@ -8,31 +8,17 @@ VALUES(
     "blackWatch",
     "2023-04-01"
 )
-
-
 -- insert multiple rows
 INSERT INTO products
 -- values must be in order as the schema describes
 VALUES
-    (
-        1,
-        100,
-        "jonsnow",
-        "blackWatch",
-        "2023-04-01"
-    ),
-    (
-        2,
-        200,
-        "bran",
-        "stark",
-        "2024-03-02"
-    );
+    ( 1,100,"jonsnow","blackWatch" ),
+    (2,200,"bran","stark");
 
 
 -- insert data as new row into specific columns
 -- other data fields will be NULL
-INSERT INTO products
+INSERT INTO products(id, power, fname, house, date)
 VALUES
     (
         7,
@@ -42,6 +28,8 @@ VALUES
         "2023-02-01"
     );
 
--- Fill up the NULL values using ADD
-
 -- Modify row
+UPDATE products
+SET kingdom_id = 1
+-- If where is removed, all the rows will be updated
+where kingdom = "North"

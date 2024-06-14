@@ -15,13 +15,13 @@ MODIFY COLUMN marks varchar(5);
 
 -- move columns
 ALTER TABLE products
-MODIFY COLUMN marks
+MODIFY COLUMN marks int
 AFTER fname
 
 -- move column to first
 ALTER TABLE products
 MODIFY COLUMN marks int
-AFTER fname
+FIRST
 
 -- delete column
 ALTER TABLE products
