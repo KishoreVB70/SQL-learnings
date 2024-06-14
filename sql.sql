@@ -12,10 +12,19 @@ ALTER DATABASE db READ ONLY = 1;
 USE db;
 
 -- creating a table
-CREATE TABLE products(
+CREATE TABLE product(
     id int,
-    name varchar(20),
+    fname varchar(20),
+    lname varchar(20),
+    owner varchar(20),
+    rating varchar(20),
     spoiled date
 )
 
+-- rename table
+RENAME TABLE product to products
+
+-- add new column to table
+ALTER TABLE products
+ADD size int
 
