@@ -39,3 +39,12 @@ create table got(
 -- if it already contains a duplicate value
 alter table char
 ADD CONSTRAINT UNIQUE(id)
+
+-- NULL constrain
+-- While creation
+create table got(
+    id int NOT NULL
+)
+-- Existing column
+alter table char
+modify column id int NOT NULL
