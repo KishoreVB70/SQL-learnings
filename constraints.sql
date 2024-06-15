@@ -29,3 +29,7 @@ create table got(id int, fname varchar(40), CONSTRAINT chk_id CHECK(id < 100));
 -- Add to existing
 alter table char
 add constraint chk_id CHECK(id < 100);
+
+-- Remove constraint
+alter table char
+drop constraint chk_id
