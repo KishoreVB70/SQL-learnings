@@ -51,3 +51,4 @@ where power in (0, 70);
 --Wild card characters
 SELECT * from char
 where fname like "s%"
+AND lname like "%n"
