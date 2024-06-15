@@ -23,6 +23,7 @@ where house IS NOT NULL;
 
 
 -- Join
+
 -- Shows only common
 SELECT * from char INNER JOIN city
 ON char.city_id = city.id;
@@ -34,6 +35,7 @@ SELECT * from char RIGHT JOIN city
 ON char.city_id = city.id;
 
 -- Logical operators
+
 SELECT * from char
 WHERE id = 6 AND fname = "jon";
 SELECT * from char
@@ -48,7 +50,8 @@ select * from chc
 where power in (0, 70);
 
 
---Wild card characters
+--Wild card characters 
+
 -- % Many characters
 SELECT * from char
 where fname like "s%"
@@ -59,3 +62,10 @@ where fname like "Jo_"
 -- combination of both
 SELECT * from char
 WHERE fname like "_a%"
+
+--order by
+-- Ascending order, NULL will come first
+-- Descending order, NULL will come last
+select * from char
+-- if two kingdom are same, the sort them by their id value
+order by kingdom_id ASC, id DESC;
