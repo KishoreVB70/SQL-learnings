@@ -49,6 +49,10 @@ where power in (0, 70);
 
 
 --Wild card characters
+-- % Many characters
 SELECT * from char
 where fname like "s%"
 AND lname like "%n"
+-- _ one character
+select * from chc 
+where fname like "Jo_"
