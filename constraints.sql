@@ -48,7 +48,10 @@ alter table char
 DROP PRIMARY KEY;
 
 -- Foreign Key -> Link 2 tables
+-- You cannot add values into the main table with foreign keys which doens't exist 
+-- in the foreign table
 
+-- You cannot delete the keys in the foreign table if they are used in another table
 -- New
 create table got(id int PRIMARY KEY, power int, FOREIGN KEY(city_id) REFERENCES city(id);
 -- Existing
