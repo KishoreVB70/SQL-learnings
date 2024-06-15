@@ -52,4 +52,4 @@ create table char(
 );
 --existing
 alter table char
-alter column id int AUTOINCREMENT;
+modify column id int AUTOINCREMENT;
