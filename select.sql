@@ -32,3 +32,22 @@ ON char.city_id = city.id;
 -- Shows all from right, but leavs what not is common from the left
 SELECT * from char RIGHT JOIN city
 ON char.city_id = city.id;
+
+-- Logical operators
+SELECT * from char
+WHERE id = 6 AND fname = "jon";
+SELECT * from char
+WHERE id = 6 OR fname = "jon";
+SELECT * from char
+WHERE NOT id = 6;
+-- between
+SELECT * FROM char
+WHERE power BETWEEN 50 AND 100;
+--On
+select * from chc 
+where power in (0, 70);
+
+
+--Wild card characters
+SELECT * from char
+where fname like "s%"
