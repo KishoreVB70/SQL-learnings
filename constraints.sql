@@ -35,7 +35,8 @@ alter table char
 drop constraint chk_id
 
 -- Primary key -> both unique and not null into the same thing
-createtable got(id int PRIMARY KEY, power int);
+
+create table got(id int PRIMARY KEY, power int);
 -- Existing
 alter table char
 modify column id int PRIMARY KEY;
@@ -45,3 +46,15 @@ add CONSTRAINT PRIMARY KEY(id);
 -- Remove primary key
 alter table char
 DROP PRIMARY KEY;
+
+-- Foreign Key -> Link 2 tables
+
+-- New
+create table got(id int PRIMARY KEY, power int, FOREIGN KEY(city_id) REFERENCES city(id);
+-- Existing
+alter table char
+add CONSTRAINT fk_city_id
+FOREIGN KEY(city_id) REFERENCES city(id)
+-- delete
+alter table char
+drop constraint fk_city_id
