@@ -20,3 +20,15 @@ where house IS NULL;
 -- find not NULL
 SELECT * FROM products
 where house IS NOT NULL;
+
+
+-- Join
+-- Shows only common
+SELECT * from char INNER JOIN city
+ON char.city_id = city.id;
+-- Shows all from left, but leavs what not is common from the right
+SELECT * from char LEFT JOIN city
+ON char.city_id = city.id;
+-- Shows all from right, but leavs what not is common from the left
+SELECT * from char RIGHT JOIN city
+ON char.city_id = city.id;
