@@ -38,3 +38,7 @@ create table char(
 -- Existing column
 ALTER TABLE char
 modify COLUMN power int DEFAULT 0
+
+-- His alternative
+ALTER TABLE char
+ALTER power SET DEFAULT 0
