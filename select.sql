@@ -34,6 +34,13 @@ ON char.city_id = city.id;
 SELECT * from char RIGHT JOIN city
 ON char.city_id = city.id;
 
+-- Self join with alias and concat
+select a.id, a.fname, a.lname, a.house, concat(b.fname, "  ", b.lname) as "Relative"
+from chc as a 
+inner join 
+chc as b
+on a.relative = b.id
+
 -- Logical operators
 
 SELECT * from char
