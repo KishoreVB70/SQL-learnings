@@ -64,8 +64,17 @@ SELECT * from char
 WHERE fname like "_a%"
 
 --order by
+
 -- Ascending order, NULL will come first
 -- Descending order, NULL will come last
 select * from char
 -- if two kingdom are same, the sort them by their id value
 order by kingdom_id ASC, id DESC;
+
+-- limit clause
+
+select * from chc
+limit 5;
+-- using offset
+SELECT * from char
+LIMIT 5,5;
