@@ -33,3 +33,16 @@ add constraint chk_id CHECK(id < 100);
 -- Remove constraint
 alter table char
 drop constraint chk_id
+
+
+-- Primary key -> both unique and not null into the same thing
+createtable got(id int PRIMARY KEY, power int);
+-- Existing
+alter table char
+modify column id int PRIMARY KEY;
+-- his way
+alter table char
+add CONSTRAINT PRIMARY KEY(id);
+-- Remove primary key
+alter table char
+DROP PRIMARY KEY;

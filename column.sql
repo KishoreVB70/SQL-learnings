@@ -36,9 +36,10 @@ create table char(
 );
 
 -- Existing column
+-- It is very helpful for datetime
 ALTER TABLE char
-modify COLUMN power int DEFAULT 0
+modify COLUMN date1 date DEFAULT CURRENT_DATE();
 
 -- His alternative
 ALTER TABLE char
-ALTER power SET DEFAULT 0
+ALTER power SET DEFAULT 0;
