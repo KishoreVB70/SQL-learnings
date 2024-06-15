@@ -56,3 +56,6 @@ AND lname like "%n"
 -- _ one character
 select * from chc 
 where fname like "Jo_"
+-- combination of both
+SELECT * from char
+WHERE fname like "_a%"
