@@ -78,3 +78,13 @@ limit 5;
 -- using offset
 SELECT * from char
 LIMIT 5,5;
+
+-- union operator, combine 2 or more statements
+-- The column number must be the same between two tables
+select id, fname from chc
+where id < 3
+-- union all is used to display duplicate values also
+union 
+select id, city  from city
+where power > 50
+order by fname
