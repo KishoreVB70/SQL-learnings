@@ -26,3 +26,15 @@ FIRST
 -- delete column
 ALTER TABLE products
 DROP COLUMN lname
+
+-- default value
+-- creating new
+create table char(
+    id int unique,
+    fname varchar(40) NOT NULL,
+    power int DEFAULT 0
+);
+
+-- Existing column
+ALTER TABLE char
+modify COLUMN power int DEFAULT 0
