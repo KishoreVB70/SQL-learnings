@@ -32,8 +32,16 @@ DROP TABLE products
 CREATE VIEW chc_view 
 SELECT fname, lname
 FROM chc;
-
 -- View will get automatically updated as the main table gets updated
 SELECT * FROM chc_view
-
+--Delete
 DROP VIEW chc_view
+
+-- Index
+Show INDEXES FROM chc;
+--Create
+CREATE INDEX flname_idx
+ON chc(fname, lname);
+-- Delete
+ALTER TABLE chc
+DROP INDEX flname_idx;
