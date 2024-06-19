@@ -96,3 +96,15 @@ union
 select id, city  from city
 where power > 50
 order by fname
+
+-- Sub query
+select fname, house, kingdom, power, 
+(select avg(power) from chc) as Avg_power 
+from chc
+where power > (select avg(power) from chc);
+
+-- Long useful version spanning 2 tables
+select ruler from city
+where id in
+(select city_id from chc
+where power > (select avg(power) from chc))
