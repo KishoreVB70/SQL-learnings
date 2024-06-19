@@ -28,4 +28,12 @@ RENAME TABLE product to products;
 DROP TABLE products
 
 
+-- View
+CREATE VIEW chc_view 
+SELECT fname, lname
+FROM chc;
 
+-- View will get automatically updated as the main table gets updated
+SELECT * FROM chc_view
+
+DROP VIEW chc_view

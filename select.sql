@@ -39,6 +39,7 @@ select a.id, a.fname, a.lname, a.house, concat(b.fname, "  ", b.lname) as "Relat
 from chc as a 
 inner join 
 chc as b
+-- Relative of the original points to the id of the duplicate
 on a.relative = b.id
 
 -- Logical operators
