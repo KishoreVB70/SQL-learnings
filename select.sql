@@ -116,3 +116,11 @@ group by kingdom, kingdom_id
 -- Can also user where
 having count(id) > 1
 order by  tpower desc;
+
+-- Roll up
+select sum(power) as tpower, count(id), avg(power), kingdom, kingdom_id
+from chc
+-- Sum of all the sum of powers and the count
+group by kingdom, kingdom_id with rollup
+having count(id) > 1
+order by  tpower;
