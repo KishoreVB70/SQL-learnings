@@ -57,3 +57,27 @@ ALTER TABLE chc
 ADD CONSTRAINT fk_city
 FOREIGN KEY(city_id) REFERENCES city(id)
 ON DELETE SET NULL;
+-- OR
+ON DELETE CASCADE
+
+-- Stored procedure
+delimiter $$
+create procedure aggregor()
+begin
+    select sum(power) as tpower, count(id), avg(power), kingdom, kingdom_id from chc
+    group by kingdom, kingdom_id with rollup 
+    order by  tpower;
+end $$
+delimiter ;
+-- Calling
+CALL aggregor()
+-- drop
+DROP procedure aggregor()
+-- Arguments
+delimiter $$
+create procedure pawar(in idd int)
+begin  
+    select max(power) from chc
+    where kingdom_id = idd;
+end $$
+delimiter ;
