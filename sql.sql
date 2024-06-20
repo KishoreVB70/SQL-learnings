@@ -81,3 +81,30 @@ begin
     where kingdom_id = idd;
 end $$
 delimiter ;
+
+-- Triggers
+show triggers
+-- Trigger for update
+create trigger hopower
+before update on chc
+for each row
+set new.hapower = (new.power / 2);
+-- Trigger for create
+create trigger hopower_insert
+before insert on chc
+for each row
+set new.hapower = (new.power / 2);
+-- Insert which affects another table
+create trigger after_power_kdm
+after insert on chc
+for each row
+update kdm
+set total_power = total_power + new.power
+where id = new.kingdom_id;
+-- Similarly for delete
+create trigger after_delete_power_kdm
+after delete on chc
+for each row
+update kdm
+set total_power = total_power - old.power
+where id = old.kingdom_id;
