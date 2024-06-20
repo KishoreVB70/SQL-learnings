@@ -45,3 +45,15 @@ ON chc(fname, lname);
 -- Delete
 ALTER TABLE chc
 DROP INDEX flname_idx;
+
+-- ON Delete -> foreign key
+
+-- Remove foreign key
+alter table chc
+drop foreign key fk_city;
+
+-- Add with on delete
+ALTER TABLE chc
+ADD CONSTRAINT fk_city
+FOREIGN KEY(city_id) REFERENCES city(id)
+ON DELETE SET NULL;
